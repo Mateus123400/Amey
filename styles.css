@@ -1,0 +1,601 @@
+:root {
+    --primary-color: #00B8B8; /* Azul esmeralda */
+    --secondary-color: #007F7F;
+    --accent-color: #4CAF50;
+    --text-color: #333333;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('imagem de fundo da primeria seção.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Problem Solution Section */
+.problem-solution {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.content-center {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-center h2 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.content-center p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.services h2 {
+    text-align: center;
+    color: #00E1E1;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 40px 30px;
+    background-color: var(--white);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon {
+    font-size: 4.5em !important;
+    color: #00B8B8 !important;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-top: 15px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+/* Advantages Section */
+.advantages {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.advantages h2 {
+    text-align: center;
+    color: #00B8B8;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.advantages-grid-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: var(--white);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantage-item .service-icon {
+    font-size: 2em;
+    color: #00B8B8;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.advantage-item h3 {
+    font-size: 1.3em;
+    color: #333333;
+    margin-top: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .advantages-grid,
+    .advantages-grid-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Home Service Section */
+.home-service {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+}
+
+.home-service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    color: #00B8B8;
+    font-size: 2.5em;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.animation-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.animation-container lottie-player {
+    width: 100%;
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+    .home-service-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .animation-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .animation-container lottie-player {
+        height: 300px;
+    }
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 80px 0;
+    background-color: #00B8B8;
+    color: white;
+}
+
+.why-choose h2 {
+    text-align: center;
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+}
+
+.comparison {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.we-offer, .others-offer {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.we-offer h3, .others-offer h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.we-offer li, .others-offer li {
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.we-offer .fa-check {
+    color: #4CAF50;
+}
+
+.others-offer .fa-times {
+    color: #ff0000;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.x-icon {
+    color: #ff0000;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.we-offer ul, .others-offer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.we-offer i, .others-offer i {
+    font-size: 1.2em;
+}
+
+/* Seção Veja o Nosso Trabalho */
+.our-work {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.our-work h2 {
+    text-align: center;
+    color: #00B8B8;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 120%; /* Proporção para o iframe do Instagram */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.instagram-media {
+    margin: 0 auto !important;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-container {
+        padding-bottom: 100%;
+    }
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: whatsapp-animation 2s ease-in-out infinite;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    color: #FFF;
+    transform: translateY(-5px);
+    box-shadow: 2px 7px 15px rgba(0,0,0,0.3);
+}
+
+@keyframes whatsapp-animation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Ajuste para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+
+/* Final CTA Section */
+.final-cta {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.final-cta h2 {
+    font-size: 2.5em;
+    color: #00B8B8;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-cta .cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.final-cta .cta-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon .fa-facebook:hover {
+    color: #1877f2;
+}
+
+.social-icon .fa-instagram:hover {
+    color: #e4405f;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero h2 {
+        font-size: 1.2em;
+    }
+    
+    .comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid,
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+}
